@@ -1,11 +1,13 @@
-body {background-color:rgb(200, 200, 200); width: 100vw; margin: 0; padding:0;}
+html {background-color:rgb(200,200,200); width: 100%; height: 100%;}
+body {display: flex; flex-direction: column; align-items: center; background-color:rgb(200, 200, 200); width: 100%; height: auto; margin: 0; padding:0;}
 img {width: 100%; height: 100%; object-fit: cover;}
 
 /* Header / Navbar */
 
 header {margin: 0; padding: 0;}
-nav {display: flex; position: fixed; justify-content: space-between; z-index: 1; top:0; 
-    width: 100%; height: 40px; margin: 0;padding: 0; 
+
+nav {display: flex; position: fixed; justify-content: space-between; z-index: 1; top:0; left: 0; 
+    width: 100vw; height: 40px; margin: 2;padding: 0 0 0 0; 
     background-color:rgba(210, 160, 79, 1);}
 
 #headTitle {display: flex; align-items: center; 
@@ -15,34 +17,39 @@ nav {display: flex; position: fixed; justify-content: space-between; z-index: 1;
     background-color:rgba(42,42,42,1);color:rgba(210, 160, 79, 1);}
 
 nav ul {display: flex; align-items: center; height: 100% ;
-    margin: 0; padding: 0 0px 0 10px; font-size: 1.2rem;
-    background-color:transparent;}
-nav ul li {display: flex;  align-items: center; height: 100%; padding: 0 .7rem 0 .7rem;
-    list-style-type: none; }
+    margin: 0; padding: 0 15px 0 10px; font-size: 1.2rem;
+    background-color: transparent;}
+nav ul li {display: flex; align-items: center; height: 100%; padding: 0 .7rem 0 .7rem;
+    list-style-type: none;}
 nav ul li:hover {background-color:rgba(42,42,42,1); color: rgba(210, 160, 79, 1);}
 
 /* MAIN CONTENT */
 
 #mCon {display: flex; flex-direction: column; position: relative; justify-content:center; top: 40px; 
-    margin: 0; padding: 0 15px 15px 15px; height: auto;}
-#mCon h2 {margin: 15px 15px 25px 15px; padding: 10px; text-align: center; font-size: 32px}
+    margin: 0; padding: 0 15px 15px 15px; height: auto; max-width: 1000px;}
+#mCon h2 {margin: 15px 15px 25px 15px; padding: 10px; text-align: center; font-size: 32px; color: inherit;}
 
-#grid {display: grid; grid-template-columns: 40% 40%; grid-template-rows: 300px 300px; grid-gap: 30px; justify-content:center;}
+#grid {display: grid; grid-template-columns: 45% 45%; grid-template-rows: 300px 300px; grid-gap: 30px; justify-content:center;}
 
-.recipe-links {display: fl1x; justify-content: center; margin: 0; padding: 0; border-style:solid; 
+.recipe-links {display: flex; justify-content: center; margin: 0; padding: 0; border-style:solid; 
     border-radius: 1em; border-color: rgba(42,42,42,1); overflow: hidden; box-shadow: 0px 0px 5px 5px rgba(210, 160, 79, 1);}
 .recipe-links:hover > .recipe-info {visibility: visible;}
 
-.recipe-info {display: block; /*visibility: hidden*/; 
-    width: 100%; height: 100%  ;margin: auto; padding: 5px; text-decoration: none;
+.recipe-info {display: block; visibility: hidden; 
+    width: 100%; height: 100% ;margin: auto; padding: 5px; text-decoration: none;
     background-color: rgba(42,42,42,.8);color: rgba(200,200,200,1);}
+
 .recipe-info h3 {margin: 15px 0 0 0; padding: 0; width: 100%;  text-align: center;
-    color:rgba(200,200,200,1)}
+    color:rgba(200,200,200,1);}
+
 .recipe-info ul h4{margin: 15px auto 0 auto; padding: 0; width: 70%; 
     color:rgba(200,200,200,1);}
+
 .recipe-info p {margin: 5px auto 0 30px; padding: 0; width: 70%; 
         color:rgba(200,200,200,1);}
-.recipe-info h4 {margin: 15px auto 0 30px; padding: 0; width: 70%}
+
+.recipe-info h4 {margin: 15px auto 0 30px; padding: 0; width: 70%;}
+
 /* RECIPE INFO */
 #recipe1 {background: no-repeat url("./index-resources/recipe1-cover.jpg"); background-size:cover; background-position:center;}
 #recipe2 {margin: 0; padding: 0; width: 100%;}    
@@ -53,3 +60,11 @@ nav ul li:hover {background-color:rgba(42,42,42,1); color: rgba(210, 160, 79, 1)
 /*  */
 
 footer {display: flex; margin: 30px 0 0 0; padding: 15px;}
+
+/*  */
+
+@media (max-width: 600px) {
+    nav *{font-size: 1rem;}
+    body {max-width: 600px;}
+    #grid {display: grid; grid-template-columns: 95%; grid-template-rows: 300px 300px; grid-gap: 30px; justify-content:center;}
+}
