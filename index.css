@@ -22,7 +22,7 @@ nav ul {display: flex; align-items: center; height: 100% ;
 nav ul li {display: flex; align-items: center; height: 100%; padding: 0 .7rem 0 .7rem;
     list-style-type: none; color: rgba(42,42,42,1)}
 nav ul li:hover {background-color:rgba(42,42,42,1); color: rgba(210, 160, 79, 1);}
-
+nav ul li a {color: rgba(42,42,42,1); text-decoration: none;}
 /* MAIN CONTENT */
 
 #mCon {display: flex; flex-direction: column; position: relative; justify-content:center; top: 40px; 
@@ -52,9 +52,9 @@ nav ul li:hover {background-color:rgba(42,42,42,1); color: rgba(210, 160, 79, 1)
 
 /* RECIPE INFO */
 #recipe1 {background: no-repeat url("./index-resources/recipe1-cover.jpg"); background-size:cover; background-position:center;}
-#recipe2 {margin: 0; padding: 0; width: 100%;}    
-#recipe3 {margin: 0; padding: 0; width: 100%;}
-#recipe4 {margin: 0; padding: 0; width: 100%;}
+#recipe2 {background: no-repeat url("./index-resources/Creamy-Broccoli-Cheddar-Soup-8.jpg"); background-size:cover; background-position:center;}    
+#recipe3 {background: no-repeat url("./index-resources/oven-roasted-herb-potatoes.jpg"); background-size:cover; background-position:center;}
+#recipe4 {background: no-repeat url("./index-resources/slow-cooker-beef-stew-13.jpg"); background-size:cover; background-position:center;}
 
 
 /*  */
